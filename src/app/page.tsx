@@ -1,101 +1,98 @@
-import Image from "next/image";
+'use client';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { State } from "./types/product";
+import { Card } from "./components/Card";
+import { fetchProducts } from "./helpers/products";
+import { filterByTitle, loadMoreProducts, sortByKeyAndOrder } from "./slice/product.slice";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const dispatch = useDispatch<any>();
+  const [value, setValue] = useState("");
+  const [key, setKey] = useState("");
+  const [order, setOrder] = useState("");
+  const totalProducts = useSelector((state: State) => state.products.totalProducts);
+  const products = useSelector((state: State) => state.products.products);
+  const cartProducts = useSelector((state: State) => state.products.cartProducts);
+  const total = useSelector((state: State) => state.products.total);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleKeyUp = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value)
+    if (event.target.value.trim().length === 0) {
+      dispatch(fetchProducts());
+      return;
+    }
+    dispatch(filterByTitle(value))
+  }
+
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedKey = event.target.value;
+    setKey(selectedKey);
+  }
+
+  const handleSelectOrderChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedOrder = event.target.value;
+    setOrder(selectedOrder);
+    if (key.length !== 0) {
+      dispatch(sortByKeyAndOrder({key, order: selectedOrder}))
+    }
+  }
+
+  const handleClear = () => {
+    setValue("")
+    setKey("")
+    dispatch(fetchProducts())
+  }
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
+  return (
+      <div className="space-y-8 mt-5 ">
+        <div className="flex justify-between gap-4 mx-4 sm:mx-10 items-center">
+          <input onChange={handleKeyUp} value={value}
+            className="block w-1/2 rounded-md border border-gray-300 py-1.5 px-2 text-lg text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none sm:text-lg"
+            type="text" placeholder="Search by tittle"/>
+          <div className="flex space-x-4 items-center">
+            <label className="text-white">Order by</label>
+            <select className="rounded-md border border-gray-300 py-1.5 px-2" value={key} onChange={handleSelectChange}>
+              <option value={''}>Select filter</option>
+              <option value={'price'}>Price</option>
+              <option value={'rating'}>Rating</option>
+            </select>
+            <select value={order} onChange={handleSelectOrderChange} 
+              className="col-start-1 row-start-1 w-full rounded-md border py-1.5 pr-7 pl-3 sm:w-auto">
+              <option value={''}>Select order</option>
+              <option value={'asc'}>Ascending</option>
+              <option value={'desc'}>Descending</option>
+            </select>
+            <button onClick={handleClear} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Clear</button>
+            <div className="flex flex-col items-center justify-center bg-white border border-gray-300 pl-3 pr-3 rounded-lg">
+              <span className="text-lg">Shopping Cart</span>
+              <div>
+                <span>Articles added: {cartProducts.length} </span>
+                <span> Total payable: ${total}</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    
+        <div className="flex flex-wrap justify-between gap-4 mx-4">
+          {
+            products.length === 0 ? <div className="text-white flex items-center justify-center w-full h-32"><h1>No data found</h1></div> : products.map(p => <Card key={p.id} product={p}/>)
+          }
+        </div>
+
+        {
+          products.length < totalProducts.length && value.length === 0 && (
+            <div className="w-full mx-4">
+              <button onClick={() => dispatch(loadMoreProducts())} className="w-full py-4 bg-blue-500 text-white font-semibold text-lg rounded-md">
+                Load more products...
+              </button>
+            </div>
+          )
+        }
+      </div>
   );
 }

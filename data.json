@@ -1,0 +1,274 @@
+{
+    "data": [
+            {
+              "id": 1,
+              "tittle": "Wireless Headphones",
+              "description": "Noise-canceling headphones with deep bass and long battery life.",
+              "price": 99.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.5
+            },
+            {
+              "id": 2,
+              "tittle": "Smartwatch",
+              "description": "A sleek smartwatch with fitness tracking and notification alerts.",
+              "price": 149.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.2
+            },
+            {
+              "id": 3,
+              "tittle": "Laptop Stand",
+              "description": "Ergonomic adjustable laptop stand for better posture.",
+              "price": 29.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.7
+            },
+            {
+              "id": 4,
+              "tittle": "Bluetooth Speaker",
+              "description": "Portable Bluetooth speaker with 360° sound and water resistance.",
+              "price": 59.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.3
+            },
+            {
+              "id": 5,
+              "tittle": "Smartphone",
+              "description": "Latest model with high-end specs and a stunning camera.",
+              "price": 799.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.8
+            },
+            {
+              "id": 6,
+              "tittle": "4K TV",
+              "description": "Smart 4K TV with UHD resolution and streaming apps built-in.",
+              "price": 599.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.6
+            },
+            {
+              "id": 7,
+              "tittle": "Electric Toothbrush",
+              "description": "Sonic technology toothbrush with multiple cleaning modes.",
+              "price": 89.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.4
+            },
+            {
+              "id": 8,
+              "tittle": "Gaming Mouse",
+              "description": "High-precision wireless gaming mouse with customizable buttons.",
+              "price": 49.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.5
+            },
+            {
+              "id": 9,
+              "tittle": "Drone",
+              "description": "Foldable drone with HD camera and 30 minutes flight time.",
+              "price": 399.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.7
+            },
+            {
+              "id": 10,
+              "tittle": "Coffee Maker",
+              "description": "Automatic coffee maker with multiple brew strength settings.",
+              "price": 79.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.3
+            },
+            {
+              "id": 11,
+              "tittle": "Smart Thermostat",
+              "description": "Smart thermostat that learns your schedule and reduces energy usage.",
+              "price": 129.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.8
+            },
+            {
+              "id": 12,
+              "tittle": "Instant Pot",
+              "description": "Multi-functional pressure cooker for easy meal prep and cooking.",
+              "price": 99.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.6
+            },
+            {
+              "id": 13,
+              "tittle": "Electric Kettle",
+              "description": "Fast-boiling electric kettle with temperature control.",
+              "price": 39.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.4
+            },
+            {
+              "id": 14,
+              "tittle": "Wireless Charger",
+              "description": "Qi wireless charger with fast charging support for phones and smartwatches.",
+              "price": 19.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.2
+            },
+            {
+              "id": 15,
+              "tittle": "Electric Grill",
+              "description": "Compact electric grill with non-stick surface and easy cleanup.",
+              "price": 89.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.5
+            },
+            {
+              "id": 16,
+              "tittle": "Portable Power Bank",
+              "description": "Compact power bank with 10,000mAh capacity and fast charging.",
+              "price": 29.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.3
+            },
+            {
+              "id": 17,
+              "tittle": "Bluetooth Earbuds",
+              "description": "True wireless earbuds with great sound quality and long battery life.",
+              "price": 69.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.6
+            },
+            {
+              "id": 18,
+              "tittle": "Air Purifier",
+              "description": "Smart air purifier with HEPA filtration and real-time air quality monitoring.",
+              "price": 159.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.7
+            },
+            {
+              "id": 19,
+              "tittle": "Vacuum Cleaner",
+              "description": "Robot vacuum cleaner with Wi-Fi connectivity and scheduling feature.",
+              "price": 249.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.4
+            },
+            {
+              "id": 20,
+              "tittle": "Electric Fan",
+              "description": "Oscillating fan with adjustable speed and quiet operation.",
+              "price": 49.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.2
+            },
+            {
+              "id": 21,
+              "tittle": "Smart Speaker",
+              "description": "Voice-controlled smart speaker with superior sound quality.",
+              "price": 129.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.6
+            },
+            {
+              "id": 22,
+              "tittle": "Electric Blanket",
+              "description": "Heated electric blanket with adjustable heat settings and auto shut-off.",
+              "price": 59.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.5
+            },
+            {
+              "id": 23,
+              "tittle": "Food Processor",
+              "description": "Versatile food processor with multiple attachments for chopping, slicing, and dicing.",
+              "price": 129.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.4
+            },
+            {
+              "id": 24,
+              "tittle": "Blender",
+              "description": "High-speed blender for smoothies, soups, and sauces.",
+              "price": 99.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.5
+            },
+            {
+              "id": 25,
+              "tittle": "Microwave Oven",
+              "description": "Compact microwave with 10 power levels and a variety of preset functions.",
+              "price": 89.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.3
+            },
+            {
+              "id": 26,
+              "tittle": "Cordless Drill",
+              "description": "Powerful cordless drill with adjustable speed and multiple drill bits.",
+              "price": 79.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.7
+            },
+            {
+              "id": 27,
+              "tittle": "Electric Scooter",
+              "description": "Foldable electric scooter with a range of 25 miles per charge.",
+              "price": 399.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.6
+            },
+            {
+              "id": 28,
+              "tittle": "Standing Desk",
+              "description": "Adjustable standing desk for a healthier work setup.",
+              "price": 199.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.5
+            },
+            {
+              "id": 29,
+              "tittle": "Camera Tripod",
+              "description": "Sturdy and adjustable tripod for DSLR and mirrorless cameras.",
+              "price": 49.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.3
+            },
+            {
+              "id": 30,
+              "tittle": "Digital Camera",
+              "description": "High-quality digital camera with 24MP resolution and 4K video recording.",
+              "price": 499.99,
+              "currency": "USD",
+              "image": "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg",
+              "rating": 4.8
+            }
+        ]
+}
