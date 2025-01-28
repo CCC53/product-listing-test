@@ -5,9 +5,10 @@ import { State } from "./types/product";
 import { Card } from "./components/Card";
 import { fetchProducts } from "./helpers/products";
 import { filterByTitle, loadMoreProducts, sortByKeyAndOrder } from "./slice/product.slice";
+import { AppDispatch } from "./store/store";
 
 export default function Home() {
-  const dispatch = useDispatch<any>();
+  const dispatch = useDispatch<AppDispatch>();
   const [value, setValue] = useState("");
   const [key, setKey] = useState("");
   const [order, setOrder] = useState("");

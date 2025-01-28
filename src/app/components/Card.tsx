@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux"
 import { Product } from "../types/product"
 import { addToCart, getTotal } from "../slice/product.slice";
+import { Dispatch } from "@reduxjs/toolkit";
 
 interface Props {
     product: Product
@@ -8,7 +9,7 @@ interface Props {
 
 export const Card = ({product}: Props) => {
 
-    const dispatch = useDispatch<any>();
+    const dispatch = useDispatch<Dispatch>();
 
     const handleAddCart = () => {
         dispatch(addToCart({product}));

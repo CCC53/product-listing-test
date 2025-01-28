@@ -28,7 +28,7 @@ export const productSlice = createSlice({
     },
     loadMoreProducts: (state) => {
       let i = 2;
-      state.products = state.totalProducts.slice(0, state.products.length*2);
+      state.products = state.totalProducts.slice(0, state.products.length*i);
       i++;
     },
     addToCart(state, action: PayloadAction<AddToCartActionPayload>) {
